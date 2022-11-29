@@ -13,8 +13,8 @@ function App() {
       <Provider store={store}>
         <Navbar />
         <Routes>
-          <Route path="./pages/Rockets.js" element={<Rockets />} />
-          <Route path="./pages/Missions.js" element={<Missions />} />
+          <Route path="/Rockets.js" element={<Rockets />} />
+          <Route path="/Missions.js" element={<Missions />} />
         </Routes>
       </Provider>
     </div>
