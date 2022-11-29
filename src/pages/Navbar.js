@@ -11,15 +11,9 @@ function NavBar() {
         <h1>Traverlers Hub</h1>
       </div>
       <div className="Nav-Links">
-        <NavLink to href="/">
-          Rockets
-        </NavLink>
-        <NavLink to href="/">
-          Missions
-        </NavLink>
-        <NavLink to href="/">
-          My Profile
-        </NavLink>
+        <NavLink to="/Rockets.js">Rockets</NavLink>
+        <NavLink to="./Missions.js">Missions</NavLink>
+        <NavLink to="/">My Profile</NavLink>
       </div>
     </div>
   );
