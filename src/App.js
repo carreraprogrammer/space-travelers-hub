@@ -3,8 +3,8 @@ import './App.css';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Navbar from './pages/Navbar';
-import store from './components/Redux/ConfigureStore/ConfigureStore';
+import Navbar from './components/Navbar/Navbar';
+import store from './Redux/ConfigureStore';
 import Rockets from './pages/Rockets';
 import Missions from './pages/Missions';
 function App() {
