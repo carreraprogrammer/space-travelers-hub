@@ -1,0 +1,48 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-bottom: 3px solid #f4f5f0;
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  padding-left: 3%;
+}
+
+.NavLinks {
+  display: flex;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3%;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+  align-items: center;
+  padding: 0 15px 0 15px;
+}
+
+a:nth-child(2) {
+  border-right: 1px solid black;
+}
+
+a:hover {
+  color: #f00;
+}
+
+.currentPage{
+  color: #f00;
+  text-decoration: underline;
+}
