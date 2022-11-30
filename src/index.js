@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { getMissions } from './Redux/Missions/MissionSlice';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
