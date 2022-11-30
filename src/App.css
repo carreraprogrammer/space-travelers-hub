@@ -57,3 +57,9 @@ a:hover {
   display: flex;
   gap: 1rem;
 }
+
+.cancel-btn {
+  background-color: white;
+  color: rgb(191, 195, 199);
+  transition: 0.5s ease-in-out;
+}
