@@ -1,3 +1,5 @@
+import '../Styles/Missions.css';
+
 const Missions = () => {
   return (
     <div ClassName="stat-container">
