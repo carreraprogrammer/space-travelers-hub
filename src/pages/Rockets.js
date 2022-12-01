@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { getRockets, joinMission } from '../components/Redux/RocketsRedux';
 
 const Rockets = (props) => {
-  const { reserved, id } = props;
+  const { id } = props;
 
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.Rockets.rockets);
