@@ -12,7 +12,7 @@ const Rockets = (props) => {
     if (rockets.length === 0) dispatch(getRockets());
   });
 
-  const handleJoin = (id) => {
+  const handleJoin = async (id) => {
     dispatch(joinMission(id));
   };
 
@@ -26,13 +26,14 @@ const Rockets = (props) => {
             <h2>{rocket.type}</h2>
             <p>{rocket.description}</p>
             <h1>{rocket.reserved.toString()}</h1>
+
             <button
               type="button"
               id={rocket.rocket_id}
               onClick={() => handleJoin(rocket.rocket_id, rocket.reserved)}
-              className={!reserved ? 'reserve-btn ' : 'cancel-btn'}
+              className={!rocket.reserved ? 'reserve-btn ' : 'cancel-btn'}
             >
-              {!reserved ? 'Reserve Rocket' : 'Cancel Reservation'}
+              {!rocket.reserved ? 'Reserve Rocket' : 'Cancel Reservation'}
             </button>
           </div>
         </div>
