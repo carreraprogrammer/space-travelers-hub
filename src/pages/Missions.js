@@ -1,7 +1,7 @@
 import '../Styles/Missions.css';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import { getMissions, joinMission } from '../Redux/Missions/MissionSlice';
+import { getMissions, joinMission, filterMissions } from '../Redux/Missions/MissionSlice';
 
 
 const Missions = () => {
@@ -14,11 +14,12 @@ const Missions = () => {
     if (missions.length === 0) {
       dispatch(getMissions());
     }
-  },);
+  });
 
 
-  const handleJoin = async (id) => {
+  const handleJoin = (id) => {
      dispatch(joinMission(id))
+     dispatch(filterMissions())
   }
 
   const joinBtn = (state) => {

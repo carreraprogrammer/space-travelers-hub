@@ -19,7 +19,9 @@ export const getMissions = createAsyncThunk(
     return missionApiInfo
       }
     )
-const initialState = { loading: false, data: [], error: null };
+
+    
+const initialState = { loading: false, data: [], error: null, myMissions: [] };
 
 const missionsSlice = createSlice(
  {
@@ -39,8 +41,14 @@ const missionsSlice = createSlice(
             }
             return newMissions;
           });
-          return { ...state, data: newMissions };
+          return { ...state, data: newMissions};
         },
+        filterMissions(state) {
+            const joined = state.data.filter((mission) => {
+                return mission.reserved === true;
+            });
+            return {...state, myMissions: joined }
+        }
       },
      extraReducers: (Builder) => {
         Builder.addCase(getMissions.fulfilled, (state, action) => {
@@ -59,4 +67,4 @@ const missionsSlice = createSlice(
 )
 
 export default missionsSlice.reducer
-export const { joinMission } = missionsSlice.actions;
+export const { joinMission, filterMissions } = missionsSlice.actions;
