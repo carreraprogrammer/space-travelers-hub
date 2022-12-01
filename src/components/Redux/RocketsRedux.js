@@ -4,9 +4,9 @@ export const getRockets = createAsyncThunk(
   'rocketSlice/getRockets',
   async () => {
     const response = await fetch('https://api.spacexdata.com/v3/rockets').then(
-      (data) => data.json()
+      (rocket) => rocket.json()
     );
-    const rocketApiInfo = response.map((rocket) => {
+    const rockets = response.map((rocket) => {
       const rockets = {
         id: rocket.rocket_id,
         rocketName: rocket.rocket_name,
@@ -16,45 +16,40 @@ export const getRockets = createAsyncThunk(
       };
       return rockets;
     });
-    return rocketApiInfo;
+    return rockets;
   }
 );
 
 const rocketsSlice = createSlice({
-  name: 'rockets',
+  name: 'rocket',
   initialState: {
     rockets: [],
-    status: '',
     loading: true,
+    status: '',
   },
   reducers: {
-    reserveRocket(state, action) {
-      const newState = state.rockets.map((rocket) => {
-        if (rocket.id === action.payload) {
-          return { ...rocket, reserved: true };
+    joinMission(state, { payload }) {
+      const newRockets = [];
+      state.rockets.map((rocket) => {
+        if (rocket.rocket_id === payload) {
+          newRockets.push({
+            ...rocket,
+            reserved: !rocket.reserved,
+          });
+        } else {
+          newRockets.push(rocket);
         }
-        return rocket;
+        return newRockets;
       });
-      return { ...state, rockets: newState };
-    },
-
-    cancelReservation(state, action) {
-      const newState = state.rockets.map((rocket) => {
-        if (rocket.id === action.payload) {
-          return { ...rocket, reserved: false };
-        }
-        return rocket;
-      });
-      return { ...state, rockets: newState };
+      return { ...state, rockets: newRockets };
     },
   },
 
   extraReducers: (builder) => {
     builder.addCase(getRockets.fulfilled, (state, action) => {
-      const newState = state;
-      newState.rockets = action.payload;
+      state.rockets = action.payload;
     });
   },
 });
-export const { reserveRocket, cancelReservation } = rocketsSlice.actions;
+export const { joinMission } = rocketsSlice.actions;
 export default rocketsSlice.reducer;
