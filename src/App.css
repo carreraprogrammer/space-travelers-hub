@@ -46,3 +46,25 @@ a:hover {
   color: #f00;
   text-decoration: underline;
 }
+
+.joinStatus {
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  width: 90%;
+  margin-left: 5%;
+
+}
+
+.activeStatus {
+  border-radius: 5px;
+  background-color: rgb(64, 179, 224);
+  width: 90%;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 5%;
+  text-align: center;
+}
