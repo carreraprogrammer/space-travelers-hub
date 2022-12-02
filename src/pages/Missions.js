@@ -57,7 +57,7 @@ const Missions = () => {
               <button 
                 className="joinBtn"   
                 id={mission.mission_id} 
-                onClick={ () => handleJoin(mission.mission_id, mission.reserved) }
+                onClick={ () => handleJoin(mission.mission_id) }
                 style={joinBtn(mission.reserved)}
                 >
                   Join Mission

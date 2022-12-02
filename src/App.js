@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar';
 import store from './Redux/ConfigureStore';
 import Rockets from './pages/Rockets';
 import Missions from './pages/Missions';

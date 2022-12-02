@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import Logo from '../../Images/planet.png';
+import Logo from '../Images/planet.png';
 import { NavLink } from 'react-router-dom';
 
 function NavBar() {
