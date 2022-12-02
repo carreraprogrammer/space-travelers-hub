@@ -1,0 +1,60 @@
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+  }
+  
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 24px;
+  }
+  
+  .reserve-btn {
+    background-color: rgb(34, 109, 228);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+  }
+  
+  .cancel-btn {
+    background-color: white;
+    color: rgb(191, 195, 199);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .badge {
+    background-color: rgb(34, 109, 228);
+    color: white;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+  }
+  
+  .span {
+    color: goldenrod;
+    font-size: x-large;
+  }
+
+  .rocket-img {
+    width: 20%;
+    height: 20%;
+  }
+
+  .rockets {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
