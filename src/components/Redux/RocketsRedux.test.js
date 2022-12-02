@@ -20,6 +20,7 @@ describe('Test filterMissions', () => ({
                 },
             ],
         };
+
         const expected = [
             {
                 rocket_id: '1',
@@ -35,8 +36,9 @@ describe('Test filterMissions', () => ({
 })
 
 
-describe('get rockets fucntion test', () => {
-    it('should return an object', () => {
+
+describe('get rockets funtion test', () => {
+    it('get rockets test', () => {
       expect(getRockets()).toEqual({
         type: 'GET_ROCKETS',
       });
