@@ -145,7 +145,7 @@ Example command:
 - Twitter: [@carreraprog](https://twitter.com/carreraprog)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/daniel-carrera-85a917244/)
 
-👤 **Author2**
+👤 **David Underwood**
 
 - GitHub: [@david63011](https://github.com/david63011/Bookstore/commits?author=david63011)
 - Twitter: [@david630](https://twitter.com/david630)
