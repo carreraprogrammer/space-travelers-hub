@@ -7,6 +7,8 @@ import Navbar from './components/Navbar/Navbar';
 import store from './Redux/ConfigureStore';
 import Rockets from './pages/Rockets';
 import Missions from './pages/Missions';
+import MyProfile from './pages/MyProfile';
+
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/Rockets.js" element={<Rockets />} />
           <Route path="/Missions.js" element={<Missions />} />
+          <Route path="/" element={<MyProfile />} />
         </Routes>
       </Provider>
     </div>
