@@ -1,3 +1,4 @@
+import '../Styles/Rockets.css';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getRockets, joinMission } from '../Redux/Rockets/RocketsSlice';
@@ -15,13 +16,13 @@ const Rockets = () => {
   };
 
   return (
-    <div className="centered">
+    <div className="centered rockets">
       {rockets.map((rocket) => (
         <div className="info" key={rocket.rocket_id}>
           <img className="rocket-img" src={rocket.flickrImages} alt="" />
           <div className="center">
             <h2>{rocket.rocketName}</h2>
-            <p>{rocket.reserved && <span class="span">reserved</span>}</p>
+            <p>{rocket.reserved && <span className="span">reserved</span>}</p>
             <h2>{rocket.type}</h2>
             <p>{rocket.description}</p>
 
