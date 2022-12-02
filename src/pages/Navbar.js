@@ -13,7 +13,7 @@ function NavBar() {
       <div className="Nav-Links">
         <NavLink to="./Rockets.js">Rockets</NavLink>
         <NavLink to="./Missions.js">Missions</NavLink>
-        <NavLink to="/">My Profile</NavLink>
+        <NavLink to="./Profile.js">My Profile</NavLink>
       </div>
     </div>
   );

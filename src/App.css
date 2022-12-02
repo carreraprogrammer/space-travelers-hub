@@ -42,6 +42,7 @@ a:hover {
 
 .info {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -69,4 +70,9 @@ a:hover {
   border: none;
   cursor: pointer;
   padding: 0.5rem 1rem;
+}
+
+.span {
+  color: goldenrod;
+  font-size: x-large;
 }

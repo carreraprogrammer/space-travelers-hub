@@ -8,7 +8,7 @@ export const getRockets = createAsyncThunk(
     );
     const rockets = response.map((rocket) => {
       const rockets = {
-        id: rocket.rocket_id,
+        rocket_id: rocket.rocket_id,
         rocketName: rocket.rocket_name,
         description: rocket.description,
         flickrImages: rocket.flickr_images,
@@ -24,8 +24,9 @@ const rocketsSlice = createSlice({
   name: 'rocket',
   initialState: {
     rockets: [],
-    loading: true,
-    status: '',
+    loading: false,
+    error: null,
+    myRockets: [],
   },
   reducers: {
     joinMission(state, { payload }) {
@@ -43,8 +44,13 @@ const rocketsSlice = createSlice({
       });
       return { ...state, rockets: newRockets };
     },
+    filterRockets(state) {
+      const reserved = state.rockets.filter((rocket) => {
+        return rocket.reserved === true;
+      });
+      return { ...state, myRockets: reserved };
+    },
   },
-
   extraReducers: (builder) => {
     builder.addCase(getRockets.fulfilled, (state, action) => {
       state.rockets = action.payload;
