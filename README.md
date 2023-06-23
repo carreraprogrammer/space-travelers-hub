@@ -82,7 +82,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://space-hub-cd.netlify.app/Missions.js)
+- [Live Demo Link](https://space-hub-cd.netlify.app/Rockets.js)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
